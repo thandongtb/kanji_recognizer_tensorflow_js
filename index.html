@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kanji Recognizer using TensorFlow.js Demo</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body>
+	<div class="container">
+		<div class="digit-demo-container">
+			<h3 id="digit-recognizer-live-demo">Kanji Recognizer using TensorFlow.js Demo</h3>
+			<div class="flex-two" style="margin-top: 20px;">
+				<button id="clear_canvas" class="material-button-pink" onclick="clearCanvas(this.id)">Clear</button>
+				<button id="predict_canvas" class="material-button-pink" onclick="predict(this.id)">Predict</button>
+			</div>
+			<div class="flex-two">
+				<div id="canvas_box_wrapper" class="canvas-box-wrapper">
+					<div id="canvas_box" class="canvas-box"></div>
+				</div>
+				<div id="result_box">
+					<canvas id="result_canvas" width="300" height="150" style="border:0px solid #d3d3d3;">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>  
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/kanji_classes.js" charset="utf-8"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>
